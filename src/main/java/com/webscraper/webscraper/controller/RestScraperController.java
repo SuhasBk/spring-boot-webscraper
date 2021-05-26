@@ -1,8 +1,5 @@
 package com.webscraper.webscraper.controller;
 
-import java.util.StringJoiner;
-import java.util.stream.Collectors;
-
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +38,6 @@ public class RestScraperController {
 		try {
 			Document doc = Jsoup.connect(url).timeout(10000).get();
 			String details = doc.select("div[id=qlook]").text();
-			details.replace(".", "\n");
 			region.setWeatherDetails(details);
 		}
 		catch(Exception e) {
