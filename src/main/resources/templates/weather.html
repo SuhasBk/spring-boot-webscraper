@@ -1,44 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>WebScraper</title>
-		<script>
-			async function getWeatherDetails() {
-				var results = document.querySelector("#results");
-				results.innerText = "Fetching...";
-				
-				var country = document.querySelector("#country").value;
-				var city = document.querySelector("#city").value;
-				
-				var data = {
-					city: city,
-					country: country
-				};
-				
-				const response = await fetch("/api/weather", {
-					method: 'POST',
-					headers: {
-						'Content-Type': "application/json"
-					},
-					body: JSON.stringify(data)
-				});
-				
-				response.json().then(resp => {
-					results.innerText = resp.weatherDetails;
-				});
-			}
-		</script>
+		<script src="/weather.js"></script>
+		<script src="/directions.js"></script>
+		<link rel="stylesheet" href="/styles.css">
+		<title>Weather Info</title>
 	</head>
 	<body>
 		<h1>Weather Info</h1>
-		<div id="container" style="text-align:center;margin-top:8%;">
+		<div id="container">
 			<h2>Where are you?</h2>
 			<form>
 				<input id="country" type="text" placeholder="Enter the country..." value="India"/> &nbsp;
 				<input id="city" type="text" placeholder="Enter the city..." value="Bangalore"/><br><br>
 				<input id="submit" type="button" value="Get Weather Details" onclick="getWeatherDetails()"/>
 			</form>
-			<p id="results" style="margin-top: 5%; font-size:150%;"></p>
+			<p id="results"></p>
 		</div>
 	</body>
 </html>

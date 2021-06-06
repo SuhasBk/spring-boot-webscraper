@@ -1,3 +1,5 @@
 spring:
-  application:    name: webscraper
-server:  port: 5000
+  application:
+    name: webscraper
+server:
+  port: 8080

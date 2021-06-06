@@ -1,0 +1,40 @@
+#container {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.intro:hover h1 {
+    transition-duration: 1s;
+    transform: scale(120%);
+}
+
+#form {
+    margin-top: 2%;
+}
+
+#directions {
+    width: 90%;
+    height: 40%;
+}
+
+#results {
+    margin-top: 5%; 
+    font-size:150%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 22%;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}

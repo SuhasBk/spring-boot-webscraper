@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/directions.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <title>Directions</title>
+</head>
+<body>
+    <div id="container">
+        <h1>Distance from A to B</h1>
+        <div id="form">
+            <div class="flex">
+                <input id="from" type="text" placeholder="Enter place A"/>
+                <input id="to" type="text" placeholder="Enter place B"/>
+                <button onclick="invertPlaces()">Reverse</button>
+            </div><br><br>
+            <button id="submit" onclick="getDirections()">Let's Go!</button>
+        </div><br>
+        <img id="directions"/>
+    </div>
+</body>
+</html>
