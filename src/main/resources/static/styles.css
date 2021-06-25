@@ -3,11 +3,6 @@
     margin-top: 2%;
 }
 
-.intro:hover h1 {
-    transition-duration: 1s;
-    transform: scale(120%);
-}
-
 #form {
     margin-top: 2%;
 }
